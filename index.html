@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8e9f6">
+  <meta name="description" content="A little birthday world made with love for Kochu.">
+  <title>Happy Birthday, Kochu 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true" id="ambient"></div>
+
+  <main>
+    <section class="screen loading-screen active" id="loadingScreen" aria-label="Loading">
+      <div class="loader-flower">✿</div>
+      <p class="eyebrow">A little world made with love</p>
+      <h1>Preparing something<br><em>special for Kochu</em></h1>
+      <div class="loading-track"><span></span></div>
+      <p class="small-note">Sprinkling a little magic…</p>
+    </section>
+
+    <section class="screen gift-screen" id="giftScreen" aria-label="Open your surprise">
+      <div class="tiny-stars" aria-hidden="true">✦　·　✧　　✦　·　✧</div>
+      <p class="eyebrow">A surprise made just for you</p>
+      <h1>Hey, <em>Kochu</em>!</h1>
+      <p class="intro-copy">Someone has a little birthday world waiting for you.</p>
+      <button class="gift-button" id="openGift" aria-label="Open the birthday gift">
+        <span class="gift-glow"></span>
+        <span class="gift-box">
+          <span class="gift-lid"><i></i></span>
+          <span class="gift-body"><i></i></span>
+          <span class="gift-bow">♡</span>
+        </span>
+        <span class="gift-caption">Tap to open your surprise</span>
+      </button>
+      <p class="small-note">Made with all my love ♡</p>
+    </section>
+
+    <section class="screen site-screen" id="siteScreen">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Kochu birthday home">♡ <span>for Kochu</span></a>
+        <button class="music-toggle" id="musicToggle" aria-label="Turn music on or off" aria-pressed="false">
+          <span class="music-icon">♫</span><span id="musicLabel">Music off</span>
+        </button>
+      </header>
+
+      <nav class="nav-pills" aria-label="Birthday sections">
+        <a href="#home">Home</a><a href="#letter">Letter</a><a href="#memories">Photos</a><a href="#story">Our story</a><a href="#cake">Cake</a>
+      </nav>
+
+      <section class="page hero-page" id="home">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <span class="floating-heart heart-a">♡</span><span class="floating-heart heart-b">♥</span>
+        <p class="eyebrow">To my favourite person</p>
+        <h1>Happy Birthday,<br><em>Kochu</em><span class="pink-dot">🥹💗</span></h1>
+        <p class="hero-copy">Today is all about you — your smile, your beautiful heart, and every little thing that makes you <em>you</em>.</p>
+        <div class="age-chip">A little celebration for your 22nd chapter</div>
+        <div class="countdown-card">
+          <p class="eyebrow">Counting down to your special day</p>
+          <div class="countdown" id="countdown">
+            <div><strong id="days">--</strong><span>Days</span></div>
+            <div><strong id="hours">--</strong><span>Hours</span></div>
+            <div><strong id="minutes">--</strong><span>Minutes</span></div>
+            <div><strong id="seconds">--</strong><span>Seconds</span></div>
+          </div>
+          <p class="countdown-message" id="countdownMessage">3 January 2027 · Your day, your magic</p>
+        </div>
+        <button class="primary-button" data-next="#letter">A little something for you <span>♡</span></button>
+        <div class="scroll-hint">Scroll gently <span>↓</span></div>
+      </section>
+
+      <section class="page letter-page" id="letter">
+        <div class="section-kicker">A letter from my heart</div>
+        <div class="letter-paper">
+          <div class="paper-flower">✿</div>
+          <p class="eyebrow">To my Kochu</p>
+          <h2>My sweetest <em>Kochu,</em></h2>
+          <div class="letter-copy">
+            <p>Happy 22nd birthday, my love. I wish I could put into words just how much you mean to me. You make ordinary days feel special, little moments feel unforgettable, and my world feel warmer just by being in it.</p>
+            <p>Thank you for being you — for your smile, your kindness, your little ways, and all the memories we have made. I am grateful for every laugh, every conversation, every quiet moment, and every new memory still waiting for us.</p>
+            <p>I hope this new chapter brings you the happiness you deserve, dreams that come true, peaceful days, exciting adventures, and countless reasons to smile. Whatever life brings, I hope you never forget how precious you are and how deeply you are loved.</p>
+            <p>Happy birthday, Ponnah. Keep shining, keep smiling, and keep being the wonderful person you are. Here's to you, to us, and to all the beautiful moments still ahead.</p>
+          </div>
+          <p class="signature">With all my love, <span>♡</span></p>
+        </div>
+        <button class="primary-button" data-next="#memories">Turn to our memories <span>→</span></button>
+      </section>
+
+      <section class="page memories-page" id="memories">
+        <div class="section-kicker">Little moments, forever memories</div>
+        <h2>Our little <em>gallery</em></h2>
+        <p class="section-intro">Thirty little spaces, waiting for thirty pieces of our story.</p>
+        <div class="photo-grid" id="photoGrid" aria-label="Thirty empty photo placeholders"></div>
+        <p class="placeholder-note">Your photographs will go here. No sample pictures have been added.</p>
+        <button class="primary-button" data-next="#story">There's a story behind us <span>♡</span></button>
+      </section>
+
+      <section class="page story-page" id="story">
+        <div class="story-inner">
+          <div class="section-kicker">The pages only we can write</div>
+          <div class="story-symbol">♡</div>
+          <h2>Our <em>Love Story</em></h2>
+          <p class="story-lead">Every love story has its own little universe. This page is saved for ours.</p>
+          <div class="story-blank">
+            <span>✧</span>
+            <p>Your story begins here…</p>
+            <small>This whole page is reserved for the moments, milestones, and memories you'll share.</small>
+          </div>
+          <p class="story-foot">To be continued, with you. ♡</p>
+        </div>
+        <button class="primary-button" data-next="#surprises">One more surprise <span>→</span></button>
+      </section>
+
+      <section class="page surprises-page" id="surprises">
+        <div class="section-kicker">A few more little surprises</div>
+        <h2>Because you deserve <em>all the magic</em></h2>
+        <div class="surprise-grid">
+          <article class="surprise-card">
+            <div class="card-emoji">🎁</div><h3>A little gift</h3>
+            <p>There's a message waiting inside.</p>
+            <button class="text-button" id="giftReveal">Open the gift <span>↗</span></button>
+            <p class="reveal-text" id="giftMessage" hidden>You are one of my favourite reasons to smile. ♡</p>
+          </article>
+          <article class="surprise-card">
+            <div class="card-emoji">💌</div><h3>A secret note</h3>
+            <p>Only for my favourite girl.</p>
+            <button class="text-button" id="secretReveal">Unlock your note <span>↗</span></button>
+            <p class="reveal-text" id="secretMessage" hidden>If I could make one wish today, it would be for you to see yourself through my eyes — wonderful, precious, and so very loved.</p>
+          </article>
+          <article class="surprise-card">
+            <div class="card-emoji">🎊</div><h3>A little celebration</h3>
+            <p>Press for a shower of happiness.</p>
+            <button class="text-button" id="confettiButton">Celebrate! <span>↗</span></button>
+          </article>
+        </div>
+        <button class="primary-button" data-next="#cake">It's cake time! <span>🎂</span></button>
+      </section>
+
+      <section class="page cake-page" id="cake">
+        <div class="section-kicker">Make a wish, birthday girl</div>
+        <h2>A cake made <em>just for you</em></h2>
+        <p class="section-intro" id="cakeInstructions">Close your eyes, make your sweetest wish, then tap the button.</p>
+        <div class="cake-stage" id="cakeStage">
+          <div class="cake-sparkle sparkle-one">✦</div><div class="cake-sparkle sparkle-two">✧</div>
+          <div class="candles" id="candles">
+            <div class="candle"><span class="flame"></span></div><div class="candle"><span class="flame"></span></div><div class="candle"><span class="flame"></span></div>
+          </div>
+          <div class="cake-top"></div><div class="cake-middle"></div><div class="cake-bottom"></div>
+          <div class="cake-plate"></div>
+          <div class="cake-heart">♡</div>
+        </div>
+        <div class="cake-actions">
+          <button class="primary-button" id="blowButton">Blow the Candles 🕯️</button>
+          <button class="secondary-button" id="cutButton" disabled>Cut the Cake 🍰</button>
+        </div>
+        <p class="cake-result" id="cakeResult" aria-live="polite"></p>
+        <button class="primary-button final-next" id="finalNext" hidden data-next="#final">See your final surprise <span>♡</span></button>
+      </section>
+
+      <section class="page final-page" id="final">
+        <div class="final-card">
+          <div class="final-stars">✦　✧　♡　✧　✦</div>
+          <p class="eyebrow">One last thing, my love</p>
+          <h2>Happy Birthday,<br><em>my Kochu</em> 🥹💗</h2>
+          <p class="final-message">If this little world could tell you one thing, it would be this: you are loved more than these words can ever hold. May your 22nd year be as beautiful as your heart.</p>
+          <div class="final-divider">♡</div>
+          <p class="final-signoff">Always cheering for you,<br><strong>your person</strong></p>
+          <button class="secondary-button" id="heartBurst">Send you a thousand hearts 💗</button>
+        </div>
+        <p class="footer-note">Made with love, just for Kochu · 03.01.2027</p>
+      </section>
+
+      <footer class="site-footer">A little world made with love <span>♡</span></footer>
+    </section>
+  </main>
+
+  <audio id="birthdayAudio" preload="none" loop>
+    <source src="assets/birthday-music.mp3" type="audio/mpeg">
+  </audio>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
